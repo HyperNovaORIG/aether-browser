@@ -1,0 +1,48 @@
+{
+  "name": "@aether/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aether — AI-native browser (desktop shell).",
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "lint": "eslint src electron --max-warnings=0",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "clean": "rm -rf out dist .turbo",
+    "package": "electron-vite build && electron-builder --dir",
+    "make": "electron-vite build && electron-builder"
+  },
+  "dependencies": {
+    "@aether/agents": "workspace:*",
+    "@aether/ai-core": "workspace:*",
+    "@aether/automation": "workspace:*",
+    "@aether/event-bus": "workspace:*",
+    "@aether/memory": "workspace:*",
+    "@aether/plugin-sdk": "workspace:*",
+    "@aether/shared": "workspace:*",
+    "@aether/ui": "workspace:*",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.2.10",
+    "lucide-react": "^0.378.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^2.2.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
+  }
+}

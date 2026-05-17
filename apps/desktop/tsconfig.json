@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "out",
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "types": ["node"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@electron/*": ["./electron/*"]
+    }
+  },
+  "include": ["src/**/*", "electron/**/*", "electron.vite.config.ts"]
+}
